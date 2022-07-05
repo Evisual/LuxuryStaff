@@ -3,3 +3,8 @@ version: ${version}
 main: org.equinoxprojects.luxurystaff.LuxuryStaff
 author: Evisual
 api-version: 1.16
+
+commands:
+  staffchat:
+    description: Command that allows staff to toggle chat
+    permission: staff.command.staffchat

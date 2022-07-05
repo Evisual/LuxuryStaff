@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc85576-328e-412f-b53e-4f7e8b464a59" name="Changes" comment="Initial Commit" />
+    <list default="true" id="ecc85576-328e-412f-b53e-4f7e8b464a59" name="Changes" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/StaffChat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/commands/StaffChatCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/ILuxuryCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/ISubCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/LuxuryCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/LuxuryCommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/SubCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/exceptions/MustBePlayerException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/exceptions/NoPermissionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/exceptions/NotEnoughArgumentsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/exceptions/UnknownCommandException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/permissions/Permissions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/LuxuryStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/LuxuryStaff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Config.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +29,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -63,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657046308439</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial Commit">
+      <created>1657046418328</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657046418328</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

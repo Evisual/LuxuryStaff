@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="LuxuryStaff">
+    <output-path>$USER_HOME$/Desktop/luxurystaff/plugins</output-path>
+    <root id="archive" name="LuxuryStaff.jar">
+      <element id="module-output" name="LuxuryStaff" />
+    </root>
+  </artifact>
+</component>

@@ -11,8 +11,9 @@ import org.equinoxprojects.luxurystaff.commands.exceptions.NoPermissionException
 import org.equinoxprojects.luxurystaff.commands.exceptions.NotEnoughArgumentsException;
 import org.equinoxprojects.luxurystaff.commands.exceptions.UnknownCommandException;
 import org.equinoxprojects.luxurystaff.config.Config;
+import org.equinoxprojects.luxurystaff.config.Messages;
 import org.equinoxprojects.luxurystaff.permissions.Permissions;
-import org.equinoxprojects.luxurystaff.util.Utils;
+import org.equinoxprojects.luxurystaff.logger.util.Utils;
 
 public class StaffChatCommand extends LuxuryCommand {
     public StaffChatCommand()
@@ -34,11 +35,11 @@ public class StaffChatCommand extends LuxuryCommand {
         if(StaffChat.getInstance().hasStaffChatEnabled(p))
         {
             StaffChat.getInstance().removeStaffChat(p);
-            p.sendMessage(Config.PREFIX + Utils.colorize("&7Successfully &c&lDISABLED &7staff-chat"));
+            p.sendMessage(Messages.STAFF_CHAT_DISABLED.getMessage());
         } else
         {
             StaffChat.getInstance().addStaffChat(p);
-            p.sendMessage(Config.PREFIX + Utils.colorize("&7Successfully &a&lENABLED &7staff-chat"));
+            p.sendMessage(Messages.STAFF_CHAT_ENABLED.getMessage());
         }
     }
 

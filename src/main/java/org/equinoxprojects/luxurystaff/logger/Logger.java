@@ -1,10 +1,9 @@
 package org.equinoxprojects.luxurystaff.logger;
 
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.equinoxprojects.luxurystaff.config.Config;
-import org.equinoxprojects.luxurystaff.util.Utils;
+import org.equinoxprojects.luxurystaff.logger.util.Utils;
 
 import java.io.*;
 import java.time.LocalDateTime;

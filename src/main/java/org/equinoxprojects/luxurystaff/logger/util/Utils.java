@@ -1,4 +1,4 @@
-package org.equinoxprojects.luxurystaff.util;
+package org.equinoxprojects.luxurystaff.logger.util;
 
 import org.bukkit.ChatColor;
 

@@ -6,6 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.equinoxprojects.luxurystaff.chat.commands.StaffChatCommand;
+import org.equinoxprojects.luxurystaff.chat.listeners.ChatListener;
 import org.equinoxprojects.luxurystaff.commands.ILuxuryCommand;
 import org.equinoxprojects.luxurystaff.commands.ISubCommand;
 import org.equinoxprojects.luxurystaff.commands.LuxuryCommandHandler;
@@ -14,7 +15,7 @@ import org.equinoxprojects.luxurystaff.commands.exceptions.NoPermissionException
 import org.equinoxprojects.luxurystaff.commands.exceptions.NotEnoughArgumentsException;
 import org.equinoxprojects.luxurystaff.commands.exceptions.UnknownCommandException;
 import org.equinoxprojects.luxurystaff.logger.Logger;
-import org.equinoxprojects.luxurystaff.util.Utils;
+import org.equinoxprojects.luxurystaff.logger.util.Utils;
 
 public class LuxuryStaff extends JavaPlugin
 {
@@ -29,6 +30,7 @@ public class LuxuryStaff extends JavaPlugin
         LOGGER.createFile(this);
 
         registerCommands();
+        registerListeners();
     }
 
     public void registerCommands()
@@ -36,6 +38,10 @@ public class LuxuryStaff extends JavaPlugin
         HANDLER.registerCommand(new StaffChatCommand());
     }
 
+    public void registerListeners()
+    {
+        Bukkit.getPluginManager().registerEvents(new ChatListener(), this);
+    }
     public void enableMessage()
     {
         ConsoleCommandSender sender = Bukkit.getConsoleSender();
@@ -50,7 +56,7 @@ public class LuxuryStaff extends JavaPlugin
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
     {
         String name = cmd.getName();
-
+  // /staffchat
         ILuxuryCommand command = HANDLER.findCommand(name);
 
         if(command == null)

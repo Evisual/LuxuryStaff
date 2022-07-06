@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc85576-328e-412f-b53e-4f7e8b464a59" name="Changes" comment="Added file support">
+    <list default="true" id="ecc85576-328e-412f-b53e-4f7e8b464a59" name="Changes" comment="Added config support">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/LuxuryStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/LuxuryStaff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/listeners/ChatListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/listeners/ChatListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Messages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/files/ConfigFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/files/ConfigFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/files/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/files/FileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/logger/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/logger/Logger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657069559279</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added config support">
+      <created>1657073329381</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657073329381</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,6 +123,7 @@
     <MESSAGE value="Added command framework" />
     <MESSAGE value="Added messages enum, added automatic enabling of staff chat." />
     <MESSAGE value="Added file support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added file support" />
+    <MESSAGE value="Added config support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added config support" />
   </component>
 </project>

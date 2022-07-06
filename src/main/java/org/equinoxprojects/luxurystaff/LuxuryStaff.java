@@ -1,5 +1,6 @@
 package org.equinoxprojects.luxurystaff;
 
+import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -21,51 +22,63 @@ import org.equinoxprojects.luxurystaff.logger.util.Utils;
 
 public class LuxuryStaff extends JavaPlugin
 {
-    private final String VERSION = "V0.1.0";
-    private final LuxuryCommandHandler HANDLER = new LuxuryCommandHandler(this);
-    private final Logger LOGGER = new Logger("LuxuryStaff");
-    private static Config config; //TODO: Reload this when config reloaded
+    private final String version = "V0.1.0";
+    private final LuxuryCommandHandler handler = new LuxuryCommandHandler(this);
+    private final Logger logger = new Logger("LuxuryStaff");
+    private static Config CONFIG; //TODO: Reload this when config reloaded
+    private LoadStatus status = LoadStatus.OK;
 
-    public static Config getCustomConfig() { return config; }
+    public static Config getCustomConfig() { return CONFIG; }
 
     @Override
     public void onEnable()
     {
-        enableMessage();
-        LOGGER.createFile(this);
-        FileManager.getInstance().loadFiles(this);
+        logger.createFile(this);
 
-        config = new Config();
+        if(!FileManager.getInstance().loadFiles(this))
+        {
+            status = LoadStatus.FAILED;
+            enableMessage("Unable to create and/or load files. Please try again or contact support.");
+            this.getPluginLoader().disablePlugin(this);
+            return;
+        }
+
+        CONFIG = new Config();
 
         registerCommands();
         registerListeners();
+
+        enableMessage(null);
     }
 
     public void registerCommands()
     {
-        HANDLER.registerCommand(new StaffChatCommand());
+        handler.registerCommand(new StaffChatCommand());
     }
 
     public void registerListeners()
     {
         Bukkit.getPluginManager().registerEvents(new ChatListener(), this);
     }
-    public void enableMessage()
+    public void enableMessage(String failedMessage)
     {
         ConsoleCommandSender sender = Bukkit.getConsoleSender();
 
         sender.sendMessage(Utils.colorize("&7------------ &bLuxury Staff &7------------"));
-        sender.sendMessage(Utils.colorize(String.format("&7Version: &a%s", VERSION)));
-        sender.sendMessage(Utils.colorize("&7Status: &aOK")); //TODO: Check status of plugin
+        sender.sendMessage(Utils.colorize(String.format("&7Version: &a%s", version)));
+        sender.sendMessage(Utils.colorize("&7Status: " + status.getMessage()));
         sender.sendMessage(Utils.colorize("&7--------------------------------------"));
+
+        if(status != LoadStatus.OK)
+            sender.sendMessage(Utils.colorize("&c" + failedMessage));
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
     {
         String name = cmd.getName();
-  // /staffchat
-        ILuxuryCommand command = HANDLER.findCommand(name);
+
+        ILuxuryCommand command = handler.findCommand(name);
 
         if(command == null)
         {
@@ -111,5 +124,19 @@ public class LuxuryStaff extends JavaPlugin
         }
 
         return true;
+    }
+}
+
+enum LoadStatus
+{
+    OK("&aOK"),
+    NEED_REBOOT("&cNEED REBOOT"),
+    FAILED("&cFAILED");
+
+    private @Getter final String message;
+
+    LoadStatus(final String message)
+    {
+        this.message = message;
     }
 }

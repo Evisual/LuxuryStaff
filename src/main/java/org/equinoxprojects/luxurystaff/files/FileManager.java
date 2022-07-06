@@ -7,6 +7,8 @@ import org.equinoxprojects.luxurystaff.config.Config;
 import org.equinoxprojects.luxurystaff.logger.LogType;
 import org.equinoxprojects.luxurystaff.logger.Logger;
 
+import java.io.IOException;
+
 public class FileManager
 {
     private static FileManager instance;
@@ -20,14 +22,20 @@ public class FileManager
     private @Getter ConfigFile messagesConfig;
     private @Getter ConfigFile config;
 
-    public void loadFiles(final LuxuryStaff plugin)
+    public boolean loadFiles(final LuxuryStaff plugin)
     {
         logger.log(LogType.INFO, "Loading files...");
 
-        messagesConfig = new ConfigFile(plugin, "messages.yml");
-        config = new ConfigFile(plugin, "config.yml");
+        try {
+            messagesConfig = new ConfigFile(plugin, "messages.yml");
+            config = new ConfigFile(plugin, "config.yml");
+        } catch(IOException e)
+        {
+            return false;
+        }
 
         logger.log(LogType.INFO, "Successfully loaded files");
+        return true;
     }
 
 }

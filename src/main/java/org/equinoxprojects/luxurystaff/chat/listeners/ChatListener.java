@@ -7,8 +7,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.equinoxprojects.luxurystaff.LuxuryStaff;
 import org.equinoxprojects.luxurystaff.chat.StaffChat;
-import org.equinoxprojects.luxurystaff.config.Config;
 import org.equinoxprojects.luxurystaff.config.Messages;
 import org.equinoxprojects.luxurystaff.permissions.Permissions;
 import org.equinoxprojects.luxurystaff.logger.util.Utils;
@@ -50,7 +50,7 @@ public class ChatListener implements Listener
     {
         Player p = e.getPlayer();
 
-        if(Config.ENABLE_STAFF_CHAT_ON_JOIN)
+        if(LuxuryStaff.getCustomConfig().ENABLE_STAFF_CHAT_ON_JOIN)
         {
             StaffChat.getInstance().addStaffChat(p);
             p.sendMessage(Messages.STAFF_CHAT_ENABLED.getMessage());

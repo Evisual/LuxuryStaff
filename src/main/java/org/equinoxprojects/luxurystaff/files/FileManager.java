@@ -18,12 +18,14 @@ public class FileManager
     }
 
     private @Getter ConfigFile messagesConfig;
+    private @Getter ConfigFile config;
 
     public void loadFiles(final LuxuryStaff plugin)
     {
         logger.log(LogType.INFO, "Loading files...");
 
         messagesConfig = new ConfigFile(plugin, "messages.yml");
+        config = new ConfigFile(plugin, "config.yml");
 
         logger.log(LogType.INFO, "Successfully loaded files");
     }

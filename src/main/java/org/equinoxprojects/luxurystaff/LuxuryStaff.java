@@ -14,6 +14,7 @@ import org.equinoxprojects.luxurystaff.commands.exceptions.MustBePlayerException
 import org.equinoxprojects.luxurystaff.commands.exceptions.NoPermissionException;
 import org.equinoxprojects.luxurystaff.commands.exceptions.NotEnoughArgumentsException;
 import org.equinoxprojects.luxurystaff.commands.exceptions.UnknownCommandException;
+import org.equinoxprojects.luxurystaff.config.Config;
 import org.equinoxprojects.luxurystaff.files.FileManager;
 import org.equinoxprojects.luxurystaff.logger.Logger;
 import org.equinoxprojects.luxurystaff.logger.util.Utils;
@@ -23,16 +24,21 @@ public class LuxuryStaff extends JavaPlugin
     private final String VERSION = "V0.1.0";
     private final LuxuryCommandHandler HANDLER = new LuxuryCommandHandler(this);
     private final Logger LOGGER = new Logger("LuxuryStaff");
+    private static Config config; //TODO: Reload this when config reloaded
+
+    public static Config getCustomConfig() { return config; }
 
     @Override
     public void onEnable()
     {
         enableMessage();
         LOGGER.createFile(this);
+        FileManager.getInstance().loadFiles(this);
+
+        config = new Config();
 
         registerCommands();
         registerListeners();
-        FileManager.getInstance().loadFiles(this);
     }
 
     public void registerCommands()

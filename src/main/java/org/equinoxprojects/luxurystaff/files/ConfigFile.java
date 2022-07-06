@@ -34,7 +34,7 @@ public class ConfigFile
             config.save(file);
         } catch(IOException e)
         {
-            logger.log(LogType.ERROR, "Failed to load: " + file.getName());
+            logger.log(LogType.ERROR, "Failed to save: " + file.getName());
         }
     }
 
@@ -44,16 +44,17 @@ public class ConfigFile
             config.load(file);
         } catch(IOException | InvalidConfigurationException e)
         {
-            e.printStackTrace();
+            logger.log(LogType.ERROR, "Failed to load: " + file.getName());
         }
     }
 
     private boolean createFile()
     {
         try {
-            return file.createNewFile();
+            if(!file.exists())
+                return file.createNewFile();
         } catch(IOException e) {
-            e.printStackTrace();
+            logger.log(LogType.ERROR, "Failed to create: " + file.getName());
         }
 
         return false;

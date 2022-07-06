@@ -2,7 +2,7 @@ package org.equinoxprojects.luxurystaff.logger;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.equinoxprojects.luxurystaff.config.Config;
+import org.equinoxprojects.luxurystaff.LuxuryStaff;
 import org.equinoxprojects.luxurystaff.logger.util.Utils;
 
 import java.io.*;
@@ -58,7 +58,7 @@ public class Logger
      */
     public void debug(String message)
     {
-        if(!Config.DEBUG_MODE) return;
+        if(!LuxuryStaff.getCustomConfig().DEBUG_MODE) return;
 
         String finalMessage = Utils.colorize("&7[&b" + name + "&7] " + "&7[&3DEBUG&7] " + message);
 

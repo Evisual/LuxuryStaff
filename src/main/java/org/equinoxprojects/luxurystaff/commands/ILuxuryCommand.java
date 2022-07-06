@@ -8,6 +8,7 @@ import org.equinoxprojects.luxurystaff.commands.exceptions.NoPermissionException
 import org.equinoxprojects.luxurystaff.commands.exceptions.NotEnoughArgumentsException;
 import org.equinoxprojects.luxurystaff.commands.exceptions.UnknownCommandException;
 
+import java.util.List;
 import java.util.Map;
 
 public interface ILuxuryCommand
@@ -21,6 +22,8 @@ public interface ILuxuryCommand
     String getUsage();
 
     ISubCommand getSubCommand(String subCommand);
+
+    List<String> getAliases();
 
     boolean noSubCommands();
 }

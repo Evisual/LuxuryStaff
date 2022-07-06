@@ -19,6 +19,12 @@ public class LuxuryCommandHandler
         {
             if(command.getName().equalsIgnoreCase(name))
                 return command;
+
+            for(String s : command.getAliases())
+            {
+                if(s.equalsIgnoreCase(name))
+                    return command;
+            }
         }
 
         return null;

@@ -15,6 +15,7 @@ import org.equinoxprojects.luxurystaff.commands.exceptions.MustBePlayerException
 import org.equinoxprojects.luxurystaff.commands.exceptions.NoPermissionException;
 import org.equinoxprojects.luxurystaff.commands.exceptions.NotEnoughArgumentsException;
 import org.equinoxprojects.luxurystaff.commands.exceptions.UnknownCommandException;
+import org.equinoxprojects.luxurystaff.commands.general.ConfigReloadCommand;
 import org.equinoxprojects.luxurystaff.config.Config;
 import org.equinoxprojects.luxurystaff.files.FileManager;
 import org.equinoxprojects.luxurystaff.logger.Logger;
@@ -29,6 +30,12 @@ public class LuxuryStaff extends JavaPlugin
     private LoadStatus status = LoadStatus.OK;
 
     public static Config getCustomConfig() { return CONFIG; }
+
+    public static void reloadCustomConfig()
+    {
+        CONFIG.readValues();
+        CONFIG.writeValues();
+    }
 
     @Override
     public void onEnable()
@@ -54,6 +61,7 @@ public class LuxuryStaff extends JavaPlugin
     public void registerCommands()
     {
         handler.registerCommand(new StaffChatCommand());
+        handler.registerCommand(new ConfigReloadCommand());
     }
 
     public void registerListeners()

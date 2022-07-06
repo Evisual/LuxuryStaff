@@ -11,10 +11,12 @@ import java.util.HashMap;
 public enum Messages
 {
     STAFF_CHAT_ENABLED("staff-chat-enabled", "%prefix% &7Successfully &a&lENABLED &7staff-chat"),
-    STAFF_CHAT_DISABLED("staff-chat-disabled", "%prefix% &7Successfully &c&lDISABLED &7staff-chat");
+    STAFF_CHAT_DISABLED("staff-chat-disabled", "%prefix% &7Successfully &c&lDISABLED &7staff-chat"),
+    RELOADED_FILES("reloaded-files", "%prefix% &a&lSuccessfully &7reloaded files"),
+    RELOADED_FILES_FAILED("reloaded-files-failed", "%prefix% &c&lFailed &7to reload files");
 
     private final String path;
-    private final String message;
+    private String message;
 
     Messages(final String path, final String defaultMessage)
     {
@@ -51,4 +53,26 @@ public enum Messages
         return newMessage;
     }
 
+    public static void reload()
+    {
+        for(Messages message : Messages.values())
+        {
+            ConfigFile messagesConfig = FileManager.getInstance().getMessagesConfig();
+            FileConfiguration config = messagesConfig.getConfig();
+
+            String path = message.path;
+
+            String newMessage = config.getString(path);
+            String defaultMessage = message.message;
+
+            if(newMessage == null)
+            {
+                message.message = defaultMessage.replaceAll("%prefix%", LuxuryStaff.getCustomConfig().PREFIX);
+                config.set(path, defaultMessage);
+                messagesConfig.save();
+            }
+            else
+                message.message = newMessage.replaceAll("%prefix%", LuxuryStaff.getCustomConfig().PREFIX);
+        }
+    }
 }

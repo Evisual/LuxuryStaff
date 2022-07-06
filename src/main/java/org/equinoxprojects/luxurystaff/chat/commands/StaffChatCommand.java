@@ -10,10 +10,12 @@ import org.equinoxprojects.luxurystaff.commands.exceptions.MustBePlayerException
 import org.equinoxprojects.luxurystaff.commands.exceptions.NoPermissionException;
 import org.equinoxprojects.luxurystaff.commands.exceptions.NotEnoughArgumentsException;
 import org.equinoxprojects.luxurystaff.commands.exceptions.UnknownCommandException;
-import org.equinoxprojects.luxurystaff.config.Config;
 import org.equinoxprojects.luxurystaff.config.Messages;
 import org.equinoxprojects.luxurystaff.permissions.Permissions;
-import org.equinoxprojects.luxurystaff.logger.util.Utils;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class StaffChatCommand extends LuxuryCommand {
     public StaffChatCommand()
@@ -46,6 +48,12 @@ public class StaffChatCommand extends LuxuryCommand {
     @Override
     public String getUsage() {
         return "/staffchat";
+    }
+
+    @Override
+    public List<String> getAliases()
+    {
+        return Collections.singletonList("sc");
     }
 
     @Override

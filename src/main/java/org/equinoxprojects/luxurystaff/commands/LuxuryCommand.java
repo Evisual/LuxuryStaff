@@ -1,11 +1,13 @@
 package org.equinoxprojects.luxurystaff.commands;
 
+import org.equinoxprojects.luxurystaff.logger.Logger;
+
 import java.util.ArrayList;
 import java.util.Map;
 
 public abstract class LuxuryCommand implements ILuxuryCommand
 {
-
+    protected final Logger logger = new Logger("LuxuryStaff");
     protected final ArrayList<ISubCommand> subCommands = new ArrayList<>();
 
     protected final String name;

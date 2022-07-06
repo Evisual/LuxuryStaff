@@ -8,3 +8,7 @@ commands:
   staffchat:
     description: Command that allows staff to toggle chat
     permission: staff.command.staffchat
+    aliases: [sc]
+  config:
+    description: Command to reload config
+    permission: staff.command.config.reload

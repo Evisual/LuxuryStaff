@@ -6,7 +6,8 @@ import org.bukkit.entity.Player;
 public enum Permissions
 {
     STAFFCHAT("command.staffchat"),
-    VIEW_STAFFCHAT("staffchat.view");
+    VIEW_STAFFCHAT("staffchat.view"),
+    CONFIG_RELOAD("command.config.reload");
 
     private final String permission;
 

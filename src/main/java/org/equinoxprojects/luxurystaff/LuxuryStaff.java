@@ -14,6 +14,7 @@ import org.equinoxprojects.luxurystaff.commands.exceptions.MustBePlayerException
 import org.equinoxprojects.luxurystaff.commands.exceptions.NoPermissionException;
 import org.equinoxprojects.luxurystaff.commands.exceptions.NotEnoughArgumentsException;
 import org.equinoxprojects.luxurystaff.commands.exceptions.UnknownCommandException;
+import org.equinoxprojects.luxurystaff.files.FileManager;
 import org.equinoxprojects.luxurystaff.logger.Logger;
 import org.equinoxprojects.luxurystaff.logger.util.Utils;
 
@@ -31,6 +32,7 @@ public class LuxuryStaff extends JavaPlugin
 
         registerCommands();
         registerListeners();
+        FileManager.getInstance().loadFiles(this);
     }
 
     public void registerCommands()

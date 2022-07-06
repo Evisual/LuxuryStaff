@@ -1,5 +1,6 @@
 package org.equinoxprojects.luxurystaff.config;
 
+import org.equinoxprojects.luxurystaff.files.FileManager;
 import org.equinoxprojects.luxurystaff.logger.util.Utils;
 
 import java.util.HashMap;

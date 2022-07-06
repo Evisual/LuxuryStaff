@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc85576-328e-412f-b53e-4f7e8b464a59" name="Changes" comment="Added command framework">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/listeners/ChatListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Messages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ecc85576-328e-412f-b53e-4f7e8b464a59" name="Changes" comment="Added messages enum, added automatic enabling of staff chat.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/files/ConfigFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/files/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/LuxuryStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/LuxuryStaff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/commands/StaffChatCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/commands/StaffChatCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/exceptions/NoPermissionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/exceptions/NoPermissionException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/logger/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/logger/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/permissions/Permissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/permissions/Permissions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/util/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/logger/util/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657049094281</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added messages enum, added automatic enabling of staff chat.">
+      <created>1657069041330</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657069041330</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,6 +106,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Added command framework" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added command framework" />
+    <MESSAGE value="Added messages enum, added automatic enabling of staff chat." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added messages enum, added automatic enabling of staff chat." />
   </component>
 </project>

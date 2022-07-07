@@ -17,7 +17,9 @@ public enum Messages
     NOT_A_PLAYER("not-a-player", "&cNo player by the name of &e%player% &cexists."),
     SUCCESSFULLY_REPORTED_PLAYER("successfully-reported-player", "%prefix% &aYou have successfully reported &e%player% &afor &e%reason%"),
     YOU_WERE_REPORTED("you-were-reported", "%prefix% &cYou have been reported by &e%player% &cfor &e%reason%"),
-    REPORT_CLOSED("report-closed", "%prefix% &aSuccessfully marked report &e%id% &aas &c&l%status%");
+    REPORT_CLOSED("report-closed", "%prefix% &aSuccessfully marked report &e%id% &aas &c&l%status%"),
+    VANISHED("vanished", "%prefix% &7Successfully &a&lENABLED &7vanish"),
+    UNVANISHED("unvanished", "%prefix% &7Successfully &c&lDISABLED &7vanish");
 
     private final String path;
     private String message;

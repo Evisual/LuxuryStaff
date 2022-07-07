@@ -16,6 +16,7 @@ import org.equinoxprojects.luxurystaff.commands.exceptions.NoPermissionException
 import org.equinoxprojects.luxurystaff.commands.exceptions.NotEnoughArgumentsException;
 import org.equinoxprojects.luxurystaff.commands.exceptions.UnknownCommandException;
 import org.equinoxprojects.luxurystaff.commands.general.ConfigReloadCommand;
+import org.equinoxprojects.luxurystaff.commands.general.VanishCommand;
 import org.equinoxprojects.luxurystaff.config.Config;
 import org.equinoxprojects.luxurystaff.files.FileManager;
 import org.equinoxprojects.luxurystaff.logger.Logger;
@@ -68,6 +69,7 @@ public class LuxuryStaff extends JavaPlugin
         handler.registerCommand(new ConfigReloadCommand());
         handler.registerCommand(new ReportCommand());
         handler.registerCommand(new ReportsCommand());
+        handler.registerCommand(new VanishCommand());
     }
 
     public void registerListeners()

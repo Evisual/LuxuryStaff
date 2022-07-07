@@ -1,5 +1,6 @@
 package org.equinoxprojects.luxurystaff.player;
 
+import lombok.Getter;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ public class PlayerManager
     public static PlayerManager getInstance() { return instance; }
 
     private final ArrayList<LuxuryPlayer> players = new ArrayList<>();
-
+    private final @Getter ArrayList<LuxuryPlayer> vanished = new ArrayList<>();
     public void addPlayer(LuxuryPlayer p)
     {
         players.add(p);

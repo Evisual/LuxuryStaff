@@ -8,7 +8,9 @@ public enum Permissions
     STAFFCHAT("command.staffchat"),
     VIEW_STAFFCHAT("staffchat.view"),
     CONFIG_RELOAD("command.config.reload"),
-    VIEW_REPORTS("command.reports.view");
+    VIEW_REPORTS("command.reports.view"),
+    VANISH("command.vanish"),
+    SEE_VANISHED("see.vanished");
 
     private final String permission;
 

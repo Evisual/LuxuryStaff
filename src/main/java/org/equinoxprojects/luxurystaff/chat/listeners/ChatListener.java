@@ -50,6 +50,8 @@ public class ChatListener implements Listener
     {
         Player p = e.getPlayer();
 
+        if(!p.hasPermission(Permissions.STAFFCHAT.getPermission())) return;
+
         if(LuxuryStaff.getCustomConfig().ENABLE_STAFF_CHAT_ON_JOIN)
         {
             StaffChat.getInstance().addStaffChat(p);

@@ -17,3 +17,7 @@ commands:
   reports:
     description: Command for staff to view reports
     permission: staff.command.reports.view
+  vanish:
+    description: Command to let staff you vanish
+    permission: staff.command.vanish
+    aliases: [v]

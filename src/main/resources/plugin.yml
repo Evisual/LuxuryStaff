@@ -12,3 +12,8 @@ commands:
   config:
     description: Command to reload config
     permission: staff.command.config.reload
+  report:
+    description: Command used to report a player
+  reports:
+    description: Command for staff to view reports
+    permission: staff.command.reports.view

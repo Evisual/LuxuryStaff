@@ -4,16 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc85576-328e-412f-b53e-4f7e8b464a59" name="Changes" comment="Added basic error handling">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/general/ConfigReloadCommand.java" afterDir="false" />
+    <list default="true" id="ecc85576-328e-412f-b53e-4f7e8b464a59" name="Changes" comment="Added /config reload">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/player/LuxuryPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/player/OnJoin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/player/PlayerManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/support/Report.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/support/ReportHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/support/ReportStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/support/commands/ReportCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/support/commands/ReportsCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/support/listeners/ReportListeners.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/util/NBTEditor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/LuxuryStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/LuxuryStaff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/commands/StaffChatCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/commands/StaffChatCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/ILuxuryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/ILuxuryCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/LuxuryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/LuxuryCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/LuxuryCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/LuxuryCommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/listeners/ChatListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/listeners/ChatListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/general/ConfigReloadCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/general/ConfigReloadCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Messages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/files/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/files/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/logger/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/logger/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/logger/util/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/util/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/permissions/Permissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/permissions/Permissions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
@@ -25,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -118,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657075458862</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added /config reload">
+      <created>1657077284425</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1657077284425</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,6 +156,7 @@
     <MESSAGE value="Added file support" />
     <MESSAGE value="Added config support" />
     <MESSAGE value="Added basic error handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added basic error handling" />
+    <MESSAGE value="Added /config reload" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added /config reload" />
   </component>
 </project>

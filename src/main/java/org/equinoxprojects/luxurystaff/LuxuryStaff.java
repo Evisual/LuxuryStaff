@@ -19,11 +19,15 @@ import org.equinoxprojects.luxurystaff.commands.general.ConfigReloadCommand;
 import org.equinoxprojects.luxurystaff.config.Config;
 import org.equinoxprojects.luxurystaff.files.FileManager;
 import org.equinoxprojects.luxurystaff.logger.Logger;
-import org.equinoxprojects.luxurystaff.logger.util.Utils;
+import org.equinoxprojects.luxurystaff.player.OnJoin;
+import org.equinoxprojects.luxurystaff.support.commands.ReportCommand;
+import org.equinoxprojects.luxurystaff.support.commands.ReportsCommand;
+import org.equinoxprojects.luxurystaff.support.listeners.ReportListeners;
+import org.equinoxprojects.luxurystaff.util.Utils;
 
 public class LuxuryStaff extends JavaPlugin
 {
-    private final String version = "V0.1.0";
+    private final String version = "V0.2.0";
     private final LuxuryCommandHandler handler = new LuxuryCommandHandler(this);
     private final Logger logger = new Logger("LuxuryStaff");
     private static Config CONFIG; //TODO: Reload this when config reloaded
@@ -62,11 +66,15 @@ public class LuxuryStaff extends JavaPlugin
     {
         handler.registerCommand(new StaffChatCommand());
         handler.registerCommand(new ConfigReloadCommand());
+        handler.registerCommand(new ReportCommand());
+        handler.registerCommand(new ReportsCommand());
     }
 
     public void registerListeners()
     {
         Bukkit.getPluginManager().registerEvents(new ChatListener(), this);
+        Bukkit.getPluginManager().registerEvents(new OnJoin(), this);
+        Bukkit.getPluginManager().registerEvents(new ReportListeners(), this);
     }
     public void enableMessage(String failedMessage)
     {

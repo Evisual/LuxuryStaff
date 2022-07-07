@@ -15,6 +15,8 @@ public class Config
     private final String PS_PREFIX = "prefix";
     public boolean ENABLE_STAFF_CHAT_ON_JOIN = true;
     private final String PS_ENABLE_STAFF_CHAT_ON_JOIN = "enable-staff-chat-on-join";
+    public boolean NOTIFY_REPORTED_PLAYER = false;
+    private final String PS_NOTIFY_REPORTED_PLAYER = "notify-reported-player";
 
     public Config()
     {
@@ -31,6 +33,7 @@ public class Config
         if(config.contains(PS_DEBUG_MODE))                DEBUG_MODE                = config.getBoolean(PS_DEBUG_MODE);
         if(config.contains(PS_PREFIX))                    PREFIX                    = config.getString(PS_PREFIX);
         if(config.contains(PS_ENABLE_STAFF_CHAT_ON_JOIN)) ENABLE_STAFF_CHAT_ON_JOIN = config.getBoolean(PS_ENABLE_STAFF_CHAT_ON_JOIN);
+        if(config.contains(PS_NOTIFY_REPORTED_PLAYER))    NOTIFY_REPORTED_PLAYER    = config.getBoolean(PS_NOTIFY_REPORTED_PLAYER);
     }
 
     public void writeValues()
@@ -38,6 +41,7 @@ public class Config
         config.set(PS_DEBUG_MODE, DEBUG_MODE);
         config.set(PS_PREFIX, PREFIX);
         config.set(PS_ENABLE_STAFF_CHAT_ON_JOIN, ENABLE_STAFF_CHAT_ON_JOIN);
+        config.set(PS_NOTIFY_REPORTED_PLAYER, NOTIFY_REPORTED_PLAYER);
 
         configFile.save();
     }

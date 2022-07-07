@@ -11,7 +11,7 @@ import org.equinoxprojects.luxurystaff.LuxuryStaff;
 import org.equinoxprojects.luxurystaff.chat.StaffChat;
 import org.equinoxprojects.luxurystaff.config.Messages;
 import org.equinoxprojects.luxurystaff.permissions.Permissions;
-import org.equinoxprojects.luxurystaff.logger.util.Utils;
+import org.equinoxprojects.luxurystaff.util.Utils;
 
 public class ChatListener implements Listener
 {

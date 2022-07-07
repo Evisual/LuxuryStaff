@@ -3,7 +3,7 @@ package org.equinoxprojects.luxurystaff.logger;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.equinoxprojects.luxurystaff.LuxuryStaff;
-import org.equinoxprojects.luxurystaff.logger.util.Utils;
+import org.equinoxprojects.luxurystaff.util.Utils;
 
 import java.io.*;
 import java.time.LocalDateTime;

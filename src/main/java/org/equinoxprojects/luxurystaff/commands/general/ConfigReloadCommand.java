@@ -41,6 +41,7 @@ public class ConfigReloadCommand extends LuxuryCommand
             return;
         }
 
+        FileManager.getInstance().reloadFiles();
         LuxuryStaff.reloadCustomConfig();
         Messages.reload();
         sender.sendMessage(Messages.RELOADED_FILES.getMessage());

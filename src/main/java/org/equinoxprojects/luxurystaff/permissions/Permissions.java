@@ -7,7 +7,8 @@ public enum Permissions
 {
     STAFFCHAT("command.staffchat"),
     VIEW_STAFFCHAT("staffchat.view"),
-    CONFIG_RELOAD("command.config.reload");
+    CONFIG_RELOAD("command.config.reload"),
+    VIEW_REPORTS("command.reports.view");
 
     private final String permission;
 

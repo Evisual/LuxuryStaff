@@ -30,7 +30,7 @@ import org.equinoxprojects.luxurystaff.util.Utils;
 
 public class LuxuryStaff extends JavaPlugin
 {
-    private final String version = "V0.2.0";
+    private final String version = "V0.2.1-ALPHA";
     private final LuxuryCommandHandler handler = new LuxuryCommandHandler(this);
     private final Logger logger = new Logger("LuxuryStaff");
     private static Config CONFIG; //TODO: Reload this when config reloaded

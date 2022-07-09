@@ -10,7 +10,8 @@ public enum Permissions
     CONFIG_RELOAD("command.config.reload"),
     VIEW_REPORTS("command.reports.view"),
     VANISH("command.vanish"),
-    SEE_VANISHED("see.vanished");
+    SEE_VANISHED("see.vanished"),
+    NEED_AUTHENTICATION("authentication");
 
     private final String permission;
 

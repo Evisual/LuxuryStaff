@@ -21,6 +21,8 @@ import org.equinoxprojects.luxurystaff.config.Config;
 import org.equinoxprojects.luxurystaff.files.FileManager;
 import org.equinoxprojects.luxurystaff.logger.Logger;
 import org.equinoxprojects.luxurystaff.player.OnJoin;
+import org.equinoxprojects.luxurystaff.security.authentication.commands.AuthenticationCommand;
+import org.equinoxprojects.luxurystaff.security.authentication.listeners.AuthenticationListeners;
 import org.equinoxprojects.luxurystaff.support.commands.ReportCommand;
 import org.equinoxprojects.luxurystaff.support.commands.ReportsCommand;
 import org.equinoxprojects.luxurystaff.support.listeners.ReportListeners;
@@ -70,6 +72,7 @@ public class LuxuryStaff extends JavaPlugin
         handler.registerCommand(new ReportCommand());
         handler.registerCommand(new ReportsCommand());
         handler.registerCommand(new VanishCommand());
+        handler.registerCommand(new AuthenticationCommand());
     }
 
     public void registerListeners()
@@ -77,6 +80,7 @@ public class LuxuryStaff extends JavaPlugin
         Bukkit.getPluginManager().registerEvents(new ChatListener(), this);
         Bukkit.getPluginManager().registerEvents(new OnJoin(), this);
         Bukkit.getPluginManager().registerEvents(new ReportListeners(), this);
+        Bukkit.getPluginManager().registerEvents(new AuthenticationListeners(), this);
     }
     public void enableMessage(String failedMessage)
     {

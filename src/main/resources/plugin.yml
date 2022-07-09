@@ -21,3 +21,7 @@ commands:
     description: Command to let staff you vanish
     permission: staff.command.vanish
     aliases: [v]
+  authenticate:
+    description: Command used for staff to log in
+    permission: staff.authentication
+    aliases: [auth]

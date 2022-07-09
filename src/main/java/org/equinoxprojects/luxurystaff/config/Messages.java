@@ -19,7 +19,12 @@ public enum Messages
     YOU_WERE_REPORTED("you-were-reported", "%prefix% &cYou have been reported by &e%player% &cfor &e%reason%"),
     REPORT_CLOSED("report-closed", "%prefix% &aSuccessfully marked report &e%id% &aas &c&l%status%"),
     VANISHED("vanished", "%prefix% &7Successfully &a&lENABLED &7vanish"),
-    UNVANISHED("unvanished", "%prefix% &7Successfully &c&lDISABLED &7vanish");
+    UNVANISHED("unvanished", "%prefix% &7Successfully &c&lDISABLED &7vanish"),
+    NEED_LOGIN("need-login", "%prefix% &cYou are required to log-in before you can access the server. Please type /auth <pass> with the password you previously set up."),
+    NEED_SETUP_PASSWORD("need-setup-password", "%prefix% &cYou haven't set up a password yet! You are required to set one up before accessing the server. Please type /auth <pass> <confirm>"),
+    INCORRECT_PASSWORD("incorrect-password", "%prefix% &cIncorrect password! Please try again or contact an administrator"),
+    LOGGED_IN("logged-in", "%prefix% &aYou have been successfully logged in!"),
+    PASSWORDS_DONT_MATCH("passwords-dont-match", "%prefix% &cThe given passwords don't match!");
 
     private final String path;
     private String message;

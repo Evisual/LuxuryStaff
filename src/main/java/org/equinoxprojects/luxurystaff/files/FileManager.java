@@ -22,6 +22,7 @@ public class FileManager
     private @Getter ConfigFile messagesConfig;
     private @Getter ConfigFile config;
     private @Getter ConfigFile reportsConfig;
+    private @Getter ConfigFile logins;
 
     public boolean loadFiles(final LuxuryStaff plugin)
     {
@@ -31,6 +32,7 @@ public class FileManager
             messagesConfig = new ConfigFile(plugin, "messages.yml");
             config = new ConfigFile(plugin, "config.yml");
             reportsConfig = new ConfigFile(plugin, "reports.yml");
+            logins = new ConfigFile(plugin, "logins.yml");
         } catch(IOException e)
         {
             return false;
@@ -45,5 +47,6 @@ public class FileManager
         messagesConfig.reload();
         config.reload();
         reportsConfig.reload();
+        logins.reload();
     }
 }

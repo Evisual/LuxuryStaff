@@ -17,3 +17,14 @@ All-in-one staff plugin
 - /config reload
   - Allows staff to reload all .yml configuration files
   - Permission: staff.command.config.reload
+- /authenticate
+  - Allows staff members to secure their accounts with a password
+  - Requires require-authentication in config to be set to true
+  - Aliases: /auth
+  - Permission: staff.authentication
+  - Anybody with the above permission will be required to have a password and log in upon each join
+- /vanish
+  - Command to allow staff to vanish from all players without staff.see.vanished
+  - Aliases: /v
+  - Permissions: staff.command.vanish
+

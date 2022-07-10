@@ -20,6 +20,7 @@ public class ChatCommand extends LuxuryCommand
     {
         super("chat");
         this.addSubCommand(new ChatToggleCommand());
+        this.addSubCommand(new ChatClearCommand());
     }
 
 

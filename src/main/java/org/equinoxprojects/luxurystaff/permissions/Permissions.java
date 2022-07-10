@@ -14,7 +14,9 @@ public enum Permissions
     NEED_AUTHENTICATION("authentication"),
     CHAT_HELP("command.chat"),
     TOGGLE_CHAT("command.chat.toggle"),
-    IGNORE_CHAT_DISABLED("chat.disabled.ignore");
+    IGNORE_CHAT_DISABLED("chat.disabled.ignore"),
+    CLEAR_CHAT("command.chat.clear"),
+    CLEAR_CHAT_BYPASS("command.chat.clear.bypass");
 
     private final String permission;
 

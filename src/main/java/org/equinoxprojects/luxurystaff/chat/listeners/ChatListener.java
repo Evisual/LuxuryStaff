@@ -14,12 +14,17 @@ import org.equinoxprojects.luxurystaff.config.Messages;
 import org.equinoxprojects.luxurystaff.permissions.Permissions;
 import org.equinoxprojects.luxurystaff.util.Utils;
 
+import java.util.HashMap;
+import java.util.UUID;
+
 public class ChatListener implements Listener
 {
     @EventHandler
     public void onChat(AsyncPlayerChatEvent e)
     {
         Player p = e.getPlayer();
+        UUID id = p.getUniqueId();
+        ChatManager manager = ChatManager.getInstance();
 
         if(staffChatCheck(p, e.getMessage()))
         {
@@ -27,12 +32,25 @@ public class ChatListener implements Listener
             return;
         }
 
-        if(ChatManager.getInstance().isDisabled() && !p.hasPermission(Permissions.IGNORE_CHAT_DISABLED.getPermission()))
+        if(manager.getOnCooldown().containsKey(p.getUniqueId()) && !p.hasPermission(Permissions.IGNORE_CHAT_SLOWED.getPermission()))
+        {
+            e.setCancelled(true);
+
+            HashMap<String, String> placeholders = new HashMap<>();
+            placeholders.put("%time%", Integer.toString(manager.getOnCooldown().get(id)));
+            p.sendMessage(Messages.CHAT_SLOWED.getMessage(placeholders));
+            return;
+        }
+
+        if(manager.isDisabled() && !p.hasPermission(Permissions.IGNORE_CHAT_DISABLED.getPermission()))
         {
             e.setCancelled(true);
             p.sendMessage(Messages.CHAT_DISABLED.getMessage());
             return;
         }
+
+        if(manager.getSlow() != 0)
+            manager.getOnCooldown().put(id, manager.getSlow());
     }
 
     public boolean staffChatCheck(Player p, String message)

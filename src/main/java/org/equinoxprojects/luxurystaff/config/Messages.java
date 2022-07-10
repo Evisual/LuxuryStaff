@@ -27,7 +27,8 @@ public enum Messages
     PASSWORDS_DONT_MATCH("passwords-dont-match", "%prefix% &cThe given passwords don't match!"),
     ENABLED_CHAT("enabled-chat", "%prefix% &7Successfully &a&lENABLED &7chat"),
     DISABLED_CHAT("disabled-chat", "%prefix% &7Successfully &c&lDISABLED &7chat"),
-    CHAT_DISABLED("chat-disabled", "%prefix% &cYou cannot talk because chat is currently disabled!");
+    CHAT_DISABLED("chat-disabled", "%prefix% &cYou cannot talk because chat is currently disabled!"),
+    CHAT_SLOWED("chat-slowed", "%prefix% &cYou cannot talk for %time% more seconds because chat is slowed!");
 
     private final String path;
     private String message;

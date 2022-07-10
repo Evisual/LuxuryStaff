@@ -21,6 +21,7 @@ public class ChatCommand extends LuxuryCommand
         super("chat");
         this.addSubCommand(new ChatToggleCommand());
         this.addSubCommand(new ChatClearCommand());
+        this.addSubCommand(new ChatSlowCommand());
     }
 
 
@@ -34,7 +35,6 @@ public class ChatCommand extends LuxuryCommand
         sender.sendMessage(line);
         sender.sendMessage(Utils.colorize("&b/chat clear &f&l- &7Clear chat"));
         sender.sendMessage(Utils.colorize("&b/chat toggle &f&l- &7Toggle chat on/off"));
-        sender.sendMessage(Utils.colorize("&b/chat on/off &f&l- &7Set chat enabled or disabled"));
         sender.sendMessage(Utils.colorize("&b/chat slow <time/off> &f&l- &7Set the chat delay"));
         sender.sendMessage(line);
     }

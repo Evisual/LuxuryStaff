@@ -6,6 +6,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.equinoxprojects.luxurystaff.chat.ChatManager;
 import org.equinoxprojects.luxurystaff.chat.commands.ChatCommand;
 import org.equinoxprojects.luxurystaff.chat.commands.StaffChatCommand;
 import org.equinoxprojects.luxurystaff.chat.listeners.ChatListener;
@@ -62,6 +63,7 @@ public class LuxuryStaff extends JavaPlugin
 
         registerCommands();
         registerListeners();
+        ChatManager.getInstance().startRunnable(this);
 
         enableMessage(null);
     }

@@ -15,6 +15,8 @@ public enum Permissions
     CHAT_HELP("command.chat"),
     TOGGLE_CHAT("command.chat.toggle"),
     IGNORE_CHAT_DISABLED("chat.disabled.ignore"),
+    IGNORE_CHAT_SLOWED("chat.slowed.ignore"),
+    SLOW_CHAT("command.chat.slow"),
     CLEAR_CHAT("command.chat.clear"),
     CLEAR_CHAT_BYPASS("command.chat.clear.bypass");
 

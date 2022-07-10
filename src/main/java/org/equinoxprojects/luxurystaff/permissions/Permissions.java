@@ -11,7 +11,10 @@ public enum Permissions
     VIEW_REPORTS("command.reports.view"),
     VANISH("command.vanish"),
     SEE_VANISHED("see.vanished"),
-    NEED_AUTHENTICATION("authentication");
+    NEED_AUTHENTICATION("authentication"),
+    CHAT_HELP("command.chat"),
+    TOGGLE_CHAT("command.chat.toggle"),
+    IGNORE_CHAT_DISABLED("chat.disabled.ignore");
 
     private final String permission;
 

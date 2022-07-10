@@ -25,3 +25,6 @@ commands:
     description: Command used for staff to log in
     permission: staff.authentication
     aliases: [auth]
+  chat:
+    description: Main command for staff to manage chat
+    permission: staff.command.chat

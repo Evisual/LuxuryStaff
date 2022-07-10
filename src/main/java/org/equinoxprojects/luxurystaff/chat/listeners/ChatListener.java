@@ -8,6 +8,7 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.equinoxprojects.luxurystaff.LuxuryStaff;
+import org.equinoxprojects.luxurystaff.chat.ChatManager;
 import org.equinoxprojects.luxurystaff.chat.StaffChat;
 import org.equinoxprojects.luxurystaff.config.Messages;
 import org.equinoxprojects.luxurystaff.permissions.Permissions;
@@ -19,11 +20,25 @@ public class ChatListener implements Listener
     public void onChat(AsyncPlayerChatEvent e)
     {
         Player p = e.getPlayer();
-        if(!StaffChat.getInstance().hasStaffChatEnabled(p))
-            return;
 
-        String message = e.getMessage();
-        e.setCancelled(true);
+        if(staffChatCheck(p, e.getMessage()))
+        {
+            e.setCancelled(true);
+            return;
+        }
+
+        if(ChatManager.getInstance().isDisabled() && !p.hasPermission(Permissions.IGNORE_CHAT_DISABLED.getPermission()))
+        {
+            e.setCancelled(true);
+            p.sendMessage(Messages.CHAT_DISABLED.getMessage());
+            return;
+        }
+    }
+
+    public boolean staffChatCheck(Player p, String message)
+    {
+        if(!StaffChat.getInstance().hasStaffChatEnabled(p))
+            return false;
 
         String newMessage = Utils.colorize("&7(&b" + Bukkit.getServer().getName() + "&7) &b" + p.getName() + "&7 » &f" + message);
 
@@ -34,6 +49,8 @@ public class ChatListener implements Listener
 
             pl.sendMessage(newMessage);
         }
+
+        return true;
     }
 
     @EventHandler

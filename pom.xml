@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>LuxuryStaff</artifactId>
-    <version>0.2.1-ALPHA</version>
+    <version>0.2.2-ALPHA</version>
     <name>LuxuryStaff</name>
     <description>A staff plugin for spigot servers</description>
 

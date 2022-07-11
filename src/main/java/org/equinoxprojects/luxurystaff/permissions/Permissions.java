@@ -1,6 +1,5 @@
 package org.equinoxprojects.luxurystaff.permissions;
 
-import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
 public enum Permissions
@@ -14,10 +13,10 @@ public enum Permissions
     NEED_AUTHENTICATION("authentication"),
     CHAT_HELP("command.chat"),
     TOGGLE_CHAT("command.chat.toggle"),
-    IGNORE_CHAT_DISABLED("chat.disabled.ignore"),
-    IGNORE_CHAT_SLOWED("chat.slowed.ignore"),
     SLOW_CHAT("command.chat.slow"),
     CLEAR_CHAT("command.chat.clear"),
+    TOGGLE_CHAT_BYPASS("command.chat.toggle.bypass"),
+    SLOW_CHAT_BYPASS("command.chat.slow.bypass"),
     CLEAR_CHAT_BYPASS("command.chat.clear.bypass");
 
     private final String permission;

@@ -32,7 +32,7 @@ public class ChatListener implements Listener
             return;
         }
 
-        if(manager.getOnCooldown().containsKey(p.getUniqueId()) && !p.hasPermission(Permissions.IGNORE_CHAT_SLOWED.getPermission()))
+        if(manager.getOnCooldown().containsKey(p.getUniqueId()) && !p.hasPermission(Permissions.SLOW_CHAT_BYPASS.getPermission()))
         {
             e.setCancelled(true);
 
@@ -42,7 +42,7 @@ public class ChatListener implements Listener
             return;
         }
 
-        if(manager.isDisabled() && !p.hasPermission(Permissions.IGNORE_CHAT_DISABLED.getPermission()))
+        if(manager.isDisabled() && !p.hasPermission(Permissions.TOGGLE_CHAT_BYPASS.getPermission()))
         {
             e.setCancelled(true);
             p.sendMessage(Messages.CHAT_DISABLED.getMessage());

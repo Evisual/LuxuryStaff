@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecc85576-328e-412f-b53e-4f7e8b464a59" name="Changes" comment="Updated version and README.md">
-      <change afterPath="$PROJECT_DIR$/documentation/commands.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/documentation/permissions.md" afterDir="false" />
+    <list default="true" id="ecc85576-328e-412f-b53e-4f7e8b464a59" name="Changes" comment="Added documentation folder &amp; updated some permissions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/listeners/ChatListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/listeners/ChatListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/LuxuryStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/LuxuryStaff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/commands/ChatCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/commands/ChatCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/commands/StaffChatCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/chat/commands/StaffChatCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/ILuxuryCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/ILuxuryCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/general/ConfigReloadCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/general/ConfigReloadCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/general/VanishCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/commands/general/VanishCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/config/Messages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/files/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/files/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/permissions/Permissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/permissions/Permissions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/player/OnJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/player/PlayerListeners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/security/authentication/commands/AuthenticationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/security/authentication/commands/AuthenticationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/security/authentication/listeners/AuthenticationListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/security/authentication/listeners/AuthenticationListeners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/support/commands/ReportCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/support/commands/ReportCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/support/commands/ReportsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/equinoxprojects/luxurystaff/support/commands/ReportsCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657479625371</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added documentation folder &amp; updated some permissions">
+      <created>1657557790263</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1657557790263</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,6 +230,7 @@
     <MESSAGE value="Added /chat clear" />
     <MESSAGE value="Added /chat slow" />
     <MESSAGE value="Updated version and README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated version and README.md" />
+    <MESSAGE value="Added documentation folder &amp; updated some permissions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added documentation folder &amp; updated some permissions" />
   </component>
 </project>

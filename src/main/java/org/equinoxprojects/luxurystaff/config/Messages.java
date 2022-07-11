@@ -28,7 +28,8 @@ public enum Messages
     ENABLED_CHAT("enabled-chat", "%prefix% &7Successfully &a&lENABLED &7chat"),
     DISABLED_CHAT("disabled-chat", "%prefix% &7Successfully &c&lDISABLED &7chat"),
     CHAT_DISABLED("chat-disabled", "%prefix% &cYou cannot talk because chat is currently disabled!"),
-    CHAT_SLOWED("chat-slowed", "%prefix% &cYou cannot talk for %time% more seconds because chat is slowed!");
+    CHAT_SLOWED("chat-slowed", "%prefix% &cYou cannot talk for %time% more seconds because chat is slowed!"),
+    SILENT_JOIN("silent-join", "%prefix% &f%player% &7has silently joined the server...");
 
     private final String path;
     private String message;

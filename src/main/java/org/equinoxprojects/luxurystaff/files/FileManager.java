@@ -1,9 +1,7 @@
 package org.equinoxprojects.luxurystaff.files;
 
 import lombok.Getter;
-import org.bukkit.plugin.java.JavaPlugin;
 import org.equinoxprojects.luxurystaff.LuxuryStaff;
-import org.equinoxprojects.luxurystaff.config.Config;
 import org.equinoxprojects.luxurystaff.logger.LogType;
 import org.equinoxprojects.luxurystaff.logger.Logger;
 
@@ -23,6 +21,7 @@ public class FileManager
     private @Getter ConfigFile config;
     private @Getter ConfigFile reportsConfig;
     private @Getter ConfigFile logins;
+    private @Getter ConfigFile permissionsConfig;
 
     public boolean loadFiles(final LuxuryStaff plugin)
     {
@@ -33,6 +32,7 @@ public class FileManager
             config = new ConfigFile(plugin, "config.yml");
             reportsConfig = new ConfigFile(plugin, "reports.yml");
             logins = new ConfigFile(plugin, "logins.yml");
+            permissionsConfig = new ConfigFile(plugin, "permissions.yml");
         } catch(IOException e)
         {
             return false;
@@ -48,5 +48,6 @@ public class FileManager
         config.reload();
         reportsConfig.reload();
         logins.reload();
+        permissionsConfig.reload();
     }
 }

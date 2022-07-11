@@ -1,5 +1,6 @@
 package org.equinoxprojects.luxurystaff.player;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -10,7 +11,9 @@ import org.equinoxprojects.luxurystaff.LuxuryStaff;
 import org.equinoxprojects.luxurystaff.config.Messages;
 import org.equinoxprojects.luxurystaff.permissions.Permissions;
 
-public class OnJoin implements Listener
+import java.util.HashMap;
+
+public class PlayerListeners implements Listener
 {
 
     @EventHandler(priority = EventPriority.HIGHEST)
@@ -21,6 +24,23 @@ public class OnJoin implements Listener
         PlayerManager.getInstance().addPlayer(pl);
 
         vanishJoinHandler(p, pl);
+        if(p.hasPermission(Permissions.SILENT_JOIN.getPermission())) {
+            e.setJoinMessage("");
+            joinMessages(p);
+        }
+    }
+
+    public void joinMessages(Player p)
+    {
+        for(Player pl : Bukkit.getOnlinePlayers())
+        {
+            if(pl.hasPermission(Permissions.SEE_SILENT_JOIN.getPermission()))
+            {
+                HashMap<String, String> placeholders = new HashMap<>();
+                placeholders.put("%player%", p.getName());
+                pl.sendMessage(Messages.SILENT_JOIN.getMessage(placeholders));
+            }
+        }
     }
 
     @EventHandler(priority = EventPriority.LOWEST)

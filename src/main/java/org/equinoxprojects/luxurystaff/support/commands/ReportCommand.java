@@ -13,6 +13,7 @@ import org.equinoxprojects.luxurystaff.commands.exceptions.NoPermissionException
 import org.equinoxprojects.luxurystaff.commands.exceptions.NotEnoughArgumentsException;
 import org.equinoxprojects.luxurystaff.commands.exceptions.UnknownCommandException;
 import org.equinoxprojects.luxurystaff.config.Messages;
+import org.equinoxprojects.luxurystaff.permissions.Permissions;
 import org.equinoxprojects.luxurystaff.support.ReportHandler;
 import org.equinoxprojects.luxurystaff.util.Utils;
 
@@ -89,5 +90,10 @@ public class ReportCommand extends LuxuryCommand
     @Override
     public boolean noSubCommands() {
         return true;
+    }
+
+    @Override
+    public String getPermission() {
+        return "";
     }
 }

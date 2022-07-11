@@ -44,6 +44,7 @@ public class ConfigReloadCommand extends LuxuryCommand
         FileManager.getInstance().reloadFiles();
         LuxuryStaff.reloadCustomConfig();
         Messages.reload();
+        Permissions.reload();
         sender.sendMessage(Messages.RELOADED_FILES.getMessage());
     }
 
@@ -60,5 +61,10 @@ public class ConfigReloadCommand extends LuxuryCommand
     @Override
     public boolean noSubCommands() {
         return true;
+    }
+
+    @Override
+    public String getPermission() {
+        return Permissions.CONFIG_RELOAD.getPermission();
     }
 }

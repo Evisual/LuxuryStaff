@@ -88,4 +88,9 @@ public class AuthenticationCommand extends LuxuryCommand
     public boolean noSubCommands() {
         return true;
     }
+
+    @Override
+    public String getPermission() {
+        return Permissions.NEED_AUTHENTICATION.getPermission();
+    }
 }

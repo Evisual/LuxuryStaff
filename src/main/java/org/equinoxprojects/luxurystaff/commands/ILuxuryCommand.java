@@ -26,4 +26,6 @@ public interface ILuxuryCommand
     List<String> getAliases();
 
     boolean noSubCommands();
+
+    String getPermission();
 }

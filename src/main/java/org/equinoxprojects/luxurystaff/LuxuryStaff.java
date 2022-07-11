@@ -5,6 +5,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.equinoxprojects.luxurystaff.chat.ChatManager;
 import org.equinoxprojects.luxurystaff.chat.commands.ChatCommand;
@@ -20,9 +21,12 @@ import org.equinoxprojects.luxurystaff.commands.exceptions.UnknownCommandExcepti
 import org.equinoxprojects.luxurystaff.commands.general.ConfigReloadCommand;
 import org.equinoxprojects.luxurystaff.commands.general.VanishCommand;
 import org.equinoxprojects.luxurystaff.config.Config;
+import org.equinoxprojects.luxurystaff.config.Messages;
 import org.equinoxprojects.luxurystaff.files.FileManager;
 import org.equinoxprojects.luxurystaff.logger.Logger;
-import org.equinoxprojects.luxurystaff.player.OnJoin;
+import org.equinoxprojects.luxurystaff.player.LuxuryPlayer;
+import org.equinoxprojects.luxurystaff.player.PlayerListeners;
+import org.equinoxprojects.luxurystaff.player.PlayerManager;
 import org.equinoxprojects.luxurystaff.security.authentication.commands.AuthenticationCommand;
 import org.equinoxprojects.luxurystaff.security.authentication.listeners.AuthenticationListeners;
 import org.equinoxprojects.luxurystaff.support.commands.ReportCommand;
@@ -32,7 +36,7 @@ import org.equinoxprojects.luxurystaff.util.Utils;
 
 public class LuxuryStaff extends JavaPlugin
 {
-    private final String version = "V0.2.2-ALPHA";
+    private final String version = "V0.2.3-ALPHA";
     private final LuxuryCommandHandler handler = new LuxuryCommandHandler(this);
     private final Logger logger = new Logger("LuxuryStaff");
     private static Config CONFIG; //TODO: Reload this when config reloaded
@@ -82,7 +86,7 @@ public class LuxuryStaff extends JavaPlugin
     public void registerListeners()
     {
         Bukkit.getPluginManager().registerEvents(new ChatListener(), this);
-        Bukkit.getPluginManager().registerEvents(new OnJoin(), this);
+        Bukkit.getPluginManager().registerEvents(new PlayerListeners(), this);
         Bukkit.getPluginManager().registerEvents(new ReportListeners(), this);
         Bukkit.getPluginManager().registerEvents(new AuthenticationListeners(), this);
     }

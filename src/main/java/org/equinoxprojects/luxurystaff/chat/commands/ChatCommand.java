@@ -53,4 +53,9 @@ public class ChatCommand extends LuxuryCommand
     public boolean noSubCommands() {
         return false;
     }
+
+    @Override
+    public String getPermission() {
+        return Permissions.CHAT_HELP.getPermission();
+    }
 }

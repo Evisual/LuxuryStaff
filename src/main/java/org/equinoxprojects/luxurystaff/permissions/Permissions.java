@@ -1,29 +1,39 @@
 package org.equinoxprojects.luxurystaff.permissions;
 
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+import org.equinoxprojects.luxurystaff.LuxuryStaff;
+import org.equinoxprojects.luxurystaff.config.Messages;
+import org.equinoxprojects.luxurystaff.files.ConfigFile;
+import org.equinoxprojects.luxurystaff.files.FileManager;
 
 public enum Permissions
 {
-    STAFFCHAT("command.staffchat"),
-    VIEW_STAFFCHAT("staffchat.view"),
-    CONFIG_RELOAD("command.config.reload"),
-    VIEW_REPORTS("command.reports.view"),
-    VANISH("command.vanish"),
-    SEE_VANISHED("see.vanished"),
-    NEED_AUTHENTICATION("authentication"),
-    CHAT_HELP("command.chat"),
-    TOGGLE_CHAT("command.chat.toggle"),
-    SLOW_CHAT("command.chat.slow"),
-    CLEAR_CHAT("command.chat.clear"),
-    TOGGLE_CHAT_BYPASS("command.chat.toggle.bypass"),
-    SLOW_CHAT_BYPASS("command.chat.slow.bypass"),
-    CLEAR_CHAT_BYPASS("command.chat.clear.bypass");
+    STAFFCHAT("staffchat", "command.staffchat"),
+    VIEW_STAFFCHAT("view-staffchat", "staffchat.view"),
+    CONFIG_RELOAD("reload-config", "command.config.reload"),
+    VIEW_REPORTS("view-reports", "command.reports.view"),
+    VANISH("vanish", "command.vanish"),
+    SEE_VANISHED("see-vanished", "see.vanished"),
+    NEED_AUTHENTICATION("authentication", "authentication"),
+    CHAT_HELP("view-chat-help", "command.chat"),
+    TOGGLE_CHAT("toggle-chat", "command.chat.toggle"),
+    SLOW_CHAT("slow-chat", "command.chat.slow"),
+    CLEAR_CHAT("clear-chat", "command.chat.clear"),
+    TOGGLE_CHAT_BYPASS("toggle-chat", "command.chat.toggle.bypass"),
+    SLOW_CHAT_BYPASS("slow-chat-bypass", "command.chat.slow.bypass"),
+    CLEAR_CHAT_BYPASS("clear-chat-bypass", "command.chat.clear.bypass"),
+    SILENT_JOIN("silent-join", "join.silent"),
+    SEE_SILENT_JOIN("see-silent-join", "join.silent.see");
 
-    private final String permission;
+    private final String path;
+    private String permission;
 
-    Permissions(String permission)
+    Permissions(final String path, String defaultPermission)
     {
-        this.permission = "staff." + permission;
+        this.path = path;
+
+        load(path, defaultPermission);
     }
 
     public boolean hasPermission(Player p)
@@ -34,5 +44,29 @@ public enum Permissions
     public String getPermission()
     {
         return permission;
+    }
+
+    public static void reload()
+    {
+        for(Permissions permission : Permissions.values())
+        {
+           permission.load(permission.path, permission.permission);
+        }
+    }
+
+    private void load(String path, String defaultPermission)
+    {
+        ConfigFile permissionsConfig = FileManager.getInstance().getPermissionsConfig();
+        FileConfiguration config = permissionsConfig.getConfig();
+
+        String newPermission = config.getString(path);
+
+        if(newPermission == null)
+        {
+            this.permission = "staff." + defaultPermission;
+            config.set(path, permission);
+            permissionsConfig.save();
+        } else
+            this.permission = newPermission;
     }
 }

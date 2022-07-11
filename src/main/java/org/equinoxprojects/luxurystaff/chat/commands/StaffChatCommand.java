@@ -60,4 +60,9 @@ public class StaffChatCommand extends LuxuryCommand {
     public boolean noSubCommands() {
         return true;
     }
+
+    @Override
+    public String getPermission() {
+        return Permissions.STAFFCHAT.getPermission();
+    }
 }

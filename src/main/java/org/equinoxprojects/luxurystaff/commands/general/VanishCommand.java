@@ -63,4 +63,9 @@ public class VanishCommand extends LuxuryCommand
     public boolean noSubCommands() {
         return true;
     }
+
+    @Override
+    public String getPermission() {
+        return Permissions.VANISH.getPermission();
+    }
 }

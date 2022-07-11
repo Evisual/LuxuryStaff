@@ -14,4 +14,6 @@
 ##### Permission to bypass disabled chat `staff.command.chat.toggle.bypass`
 ##### Permission to bypass chat slow `staff.command.chat.slow.bypass`
 ##### Permission to bypass cleared chat `staff.chat.clear.bypass`
+##### Permission to join silently `staff.join.silent`
+##### Permission to see silent joins `staff.join.silent.see`
 

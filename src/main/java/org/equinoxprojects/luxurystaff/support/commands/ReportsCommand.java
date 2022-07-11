@@ -61,4 +61,9 @@ public class ReportsCommand extends LuxuryCommand
     public boolean noSubCommands() {
         return true;
     }
+
+    @Override
+    public String getPermission() {
+        return Permissions.VIEW_REPORTS.getPermission();
+    }
 }
